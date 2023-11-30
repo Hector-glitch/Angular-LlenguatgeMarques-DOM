@@ -19,3 +19,14 @@ export function countWords() {
     resultElement.textContent = 'Número de paraules: ' + wordCount;
   }
 }
+export function valorsDiv() {
+  let selectElement = document.getElementById("select");
+  let divValors = document.getElementById("divValors");
+
+  let valors = [];
+  for (let option of selectElement.options) {
+    valors.push(option.value);
+  }
+  divValors.textContent = valors.join(', ');
+}
+

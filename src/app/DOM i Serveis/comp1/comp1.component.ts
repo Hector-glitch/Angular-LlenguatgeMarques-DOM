@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 // @ts-ignore
-import {yellowSubmarine, changeSize, countWords} from './function.js';
+import {yellowSubmarine, changeSize, countWords, valorsDiv } from './function.js';
 
 
 @Component({
@@ -20,6 +20,8 @@ export class Comp1Component implements OnInit {
     yellowSubmarine();
     changeSize();
     countWords();
+    valorsDiv();
+
 
     let nodeTitol = document.getElementById('titol');
     // @ts-ignore
