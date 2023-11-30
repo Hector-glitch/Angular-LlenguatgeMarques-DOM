@@ -1,0 +1,45 @@
+<!-- <table>
+  <tr>
+    <th>Emissor</th>
+    <th>Titol</th>
+  </tr>
+  <tr>
+    <td>{{correus[0].emissor}}</td>
+    <td>{{correus[0].titol}}</td>
+  </tr>
+  <tr>
+    <td>{{correus[1].emissor}}</td>
+    <td>{{correus[1].titol}}</td>
+  </tr>
+</table> -->
+
+<!-- <table>
+  <tr>
+    <th>Emissor</th>
+    <th>Titol</th>
+  </tr>
+  <tr *ngFor="let correu of correus">
+    <div *ngIf="!correu.llegit">
+      <td>{{correu.emissor}}</td>
+      <td style="color: yellow">{{correu.titol}}</td>
+    </div>
+    <div *ngIf="correu.llegit">
+      <td>{{correu.emissor}}</td>
+      <td>{{correu.titol}}</td>
+    </div>
+  </tr>
+</table> -->
+
+<table>
+  <tr>
+    <th>Emissor</th>
+    <th>Titol</th>
+  </tr>
+  <tr *ngFor="let correu of correus">
+      <td>{{correu.emissor}}</td>
+      <td>{{correu.titol}}</td>
+  </tr>
+</table>
+<p>Correus llegits: {{contadorRead}}</p>
+<p>Correus sense llegir: {{contadorNoRead}}</p>
+
