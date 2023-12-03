@@ -4,6 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ServeiService {
+  textVariable: string = '';
 
-  constructor() { }
+  constructor() {
+  }
+  getText(): string {
+    return this.textVariable;
+  }
+
+  // Mètode per assignar el text
+  setText(text: string): void {
+    this.textVariable = text;
+  }
 }

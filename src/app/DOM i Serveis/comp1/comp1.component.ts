@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 // @ts-ignore
 import {yellowSubmarine, changeSize, countWords} from './function.js';
-
+import {ServeiService} from "../servei/servei.service";
 
 @Component({
   selector: 'app-comp1',
@@ -13,7 +13,7 @@ import {yellowSubmarine, changeSize, countWords} from './function.js';
 })
 export class Comp1Component implements OnInit {
 
-  constructor() {}
+  constructor(private servei: ServeiService) {}
 
   ngOnInit(): void {
 
@@ -29,5 +29,9 @@ export class Comp1Component implements OnInit {
 
     let imgElement = document.getElementById('imatge') as HTMLImageElement;
     imgElement.src = 'https://img.freepik.com/vector-gratis/hermosa-casa_24877-50819.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699401600&semt=ais';
+
+    const textDiv = document.getElementById('TextObtenir')?.innerText;
+    // @ts-ignore
+    this.servei.setText(textDiv);
   }
 }
